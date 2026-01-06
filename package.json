@@ -1,0 +1,38 @@
+{
+    "name": "mindease",
+    "version": "1.0.0",
+    "description": "MindEase - A mental wellness AI chatbot for stress management and emotional support",
+    "main": "index.html",
+    "scripts": {
+        "start": "python -m http.server 8000",
+        "dev": "http-server -p 8080 -c-1",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "mental-health",
+        "wellness",
+        "chatbot",
+        "ai",
+        "stress-management",
+        "anxiety",
+        "grounding-exercises",
+        "mindfulness"
+    ],
+    "author": "MindEase Team",
+    "license": "Educational Use",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/yourusername/mindease.git"
+    },
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "browserslist": [
+        "> 1%",
+        "last 2 versions",
+        "not dead"
+    ]
+}

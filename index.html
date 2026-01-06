@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MindEase - Your personal AI wellness companion for stress management and mental well-being">
+    <meta name="theme-color" content="#2DD4CF">
+    <title>MindEase | Mental Wellness AI Chatbot</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%232DD4CF'>🧠</text></svg>">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon" aria-hidden="true">🧠</span>
+                <h1>MindEase</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#chatbot" class="nav-link">Chat</a></li>
+                <li><a href="#exercises" class="nav-link">Exercises</a></li>
+                <li><a href="#mood-tracker" class="nav-link">Mood</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Check In With Your Mind</h2>
+            <p>Get instant support, learn grounding exercises, and manage stress with your personal AI wellness companion</p>
+            <button class="cta-button" id="start-chat-btn" aria-label="Start chatting with MindEase">Start Chatting</button>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+            <div class="floating-bubble"></div>
+            <div class="floating-bubble"></div>
+            <div class="floating-bubble"></div>
+        </div>
+    </section>
+
+    <!-- Mood Tracker Section -->
+    <section id="mood-tracker" class="mood-section">
+        <div class="container">
+            <h2>How Are You Feeling Today?</h2>
+            <p class="section-subtitle">Track your mood to help us provide better support</p>
+            
+            <div class="mood-tracker">
+                <div class="mood-options">
+                    <button class="mood-btn" data-mood="amazing" aria-label="Select amazing mood" title="Amazing">
+                        <span class="mood-emoji">🌟</span>
+                        <span class="mood-label">Amazing</span>
+                    </button>
+                    <button class="mood-btn" data-mood="good" aria-label="Select good mood" title="Good">
+                        <span class="mood-emoji">😊</span>
+                        <span class="mood-label">Good</span>
+                    </button>
+                    <button class="mood-btn" data-mood="okay" aria-label="Select okay mood" title="Okay">
+                        <span class="mood-emoji">😐</span>
+                        <span class="mood-label">Okay</span>
+                    </button>
+                    <button class="mood-btn" data-mood="stressed" aria-label="Select stressed mood" title="Stressed">
+                        <span class="mood-emoji">😰</span>
+                        <span class="mood-label">Stressed</span>
+                    </button>
+                    <button class="mood-btn" data-mood="overwhelmed" aria-label="Select overwhelmed mood" title="Overwhelmed">
+                        <span class="mood-emoji">😔</span>
+                        <span class="mood-label">Overwhelmed</span>
+                    </button>
+                </div>
+                <div id="mood-feedback" class="mood-feedback" role="status" aria-live="polite"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Grounding Exercises Section -->
+    <section id="exercises" class="exercises-section">
+        <div class="container">
+            <h2>Grounding Exercises</h2>
+            <p class="section-subtitle">Quick techniques to help you feel present and calm</p>
+            
+            <div class="exercises-grid">
+                <!-- 5-4-3-2-1 Exercise -->
+                <article class="exercise-card">
+                    <div class="exercise-header">
+                        <h3>5-4-3-2-1 Technique</h3>
+                        <span class="duration" aria-label="Duration">⏱️ 3-5 min</span>
+                    </div>
+                    <p>Engage your senses to ground yourself in the present moment</p>
+                    <button class="exercise-btn" data-exercise="543" aria-label="Start 5-4-3-2-1 exercise">Start Exercise</button>
+                </article>
+
+                <!-- Box Breathing -->
+                <article class="exercise-card">
+                    <div class="exercise-header">
+                        <h3>Box Breathing</h3>
+                        <span class="duration" aria-label="Duration">⏱️ 2-3 min</span>
+                    </div>
+                    <p>Balance your nervous system with rhythmic breathing</p>
+                    <button class="exercise-btn" data-exercise="breathing" aria-label="Start box breathing exercise">Start Exercise</button>
+                </article>
+
+                <!-- Progressive Relaxation -->
+                <article class="exercise-card">
+                    <div class="exercise-header">
+                        <h3>Progressive Relaxation</h3>
+                        <span class="duration" aria-label="Duration">⏱️ 5-10 min</span>
+                    </div>
+                    <p>Release tension by systematically relaxing muscle groups</p>
+                    <button class="exercise-btn" data-exercise="relaxation" aria-label="Start progressive relaxation exercise">Start Exercise</button>
+                </article>
+
+                <!-- Grounding Walk -->
+                <article class="exercise-card">
+                    <div class="exercise-header">
+                        <h3>Mindful Grounding</h3>
+                        <span class="duration" aria-label="Duration">⏱️ 2-3 min</span>
+                    </div>
+                    <p>Simple grounding technique for immediate relief</p>
+                    <button class="exercise-btn" data-exercise="grounding" aria-label="Start mindful grounding exercise">Start Exercise</button>
+                </article>
+            </div>
+
+            <!-- Exercise Modal -->
+            <div id="exercise-modal" class="modal" role="dialog" aria-labelledby="exercise-title" aria-hidden="true">
+                <div class="modal-content">
+                    <button class="modal-close" id="close-exercise" aria-label="Close exercise">✕</button>
+                    <h3 id="exercise-title" class="exercise-title"></h3>
+                    <div id="exercise-content" class="exercise-content"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Section -->
+    <section id="chatbot" class="chatbot-section">
+        <div class="container">
+            <h2>Wellness Check-In</h2>
+            <p class="section-subtitle">A non-judgmental space to express yourself and get personalized support</p>
+            
+            <div class="chat-container">
+                <!-- Support Session Indicator -->
+                <div class="session-indicator" role="status" aria-live="polite">
+                    <span class="session-status-dot" aria-hidden="true"></span>
+                    <span class="session-status-text">Support Session Active</span>
+                </div>
+
+                <div class="chat-header">
+                    <div class="chat-header-content">
+                        <h3>👋 MindEase Wellness Assistant</h3>
+                        <p class="chat-disclaimer">Your conversations are private, secure, and never shared</p>
+                    </div>
+                </div>
+
+                <!-- Wellness Check-In Intro -->
+                <div class="wellness-intro">
+                    <h4>How This Works</h4>
+                    <ul class="wellness-flow">
+                        <li><span class="flow-number">1</span> Share how you're feeling right now</li>
+                        <li><span class="flow-number">2</span> Receive personalized support & guidance</li>
+                        <li><span class="flow-number">3</span> Practice grounding exercises together</li>
+                        <li><span class="flow-number">4</span> Build your wellness toolkit</li>
+                    </ul>
+                </div>
+
+                <div class="chat-messages" id="chat-messages" role="log" aria-label="Wellness chat messages" aria-live="polite">
+                    <div class="message bot-message">
+                        <div class="message-avatar" aria-hidden="true">🧠</div>
+                        <div class="message-content">
+                            <p><strong>Welcome to your wellness check-in! 💙</strong></p>
+                            <p>I'm here to support you with stress relief, grounding exercises, and emotional guidance.</p>
+                            <p><strong>Let's start: How are you feeling right now?</strong></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <!-- Mood Check-In Quick Start -->
+                    <div class="mood-quick-start">
+                        <label for="mood-quick" class="quick-start-label">Quick mood check:</label>
+                        <div class="mood-quick-buttons">
+                            <button class="mood-quick-btn" data-mood="great" aria-label="Feeling great">Great 🌟</button>
+                            <button class="mood-quick-btn" data-mood="good" aria-label="Feeling good">Good 😊</button>
+                            <button class="mood-quick-btn" data-mood="okay" aria-label="Feeling okay">Okay 😐</button>
+                            <button class="mood-quick-btn" data-mood="stressed" aria-label="Feeling stressed">Stressed 😰</button>
+                            <button class="mood-quick-btn" data-mood="overwhelmed" aria-label="Feeling overwhelmed">Overwhelmed 😔</button>
+                        </div>
+                    </div>
+
+                    <!-- Suggested Support Options -->
+                    <div class="suggested-prompts" id="suggested-prompts">
+                        <label class="prompts-label">Or tell me what you need:</label>
+                        <button class="prompt-btn" aria-label="Suggest: I need help managing stress">I need help managing stress</button>
+                        <button class="prompt-btn" aria-label="Suggest: Guide me through a grounding exercise">Guide me through grounding</button>
+                        <button class="prompt-btn" aria-label="Suggest: I'm feeling anxious">I'm feeling anxious</button>
+                        <button class="prompt-btn" aria-label="Suggest: Help with sleep or burnout">Help with burnout</button>
+                    </div>
+                    
+                    <!-- Chat Input Form -->
+                    <form class="chat-form" id="chat-form">
+                        <div class="input-wrapper">
+                            <input 
+                                type="text" 
+                                id="chat-input" 
+                                class="chat-input" 
+                                placeholder="Share what's on your mind... (or use buttons above)" 
+                                aria-label="Wellness message input"
+                                autocomplete="off"
+                            >
+                            <button 
+                                type="submit" 
+                                class="send-btn" 
+                                aria-label="Send wellness message"
+                                title="Send message"
+                            >
+                                <span aria-hidden="true">➤</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Session Info -->
+                    <div class="session-info">
+                        <p><small>💙 <strong>This is a safe space.</strong> Your mental health matters. All conversations are stored locally on your device.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About MindEase</h2>
+            
+            <div class="about-grid">
+                <article class="about-card">
+                    <div class="about-icon" aria-hidden="true">🛡️</div>
+                    <h3>Your Safe Space</h3>
+                    <p>MindEase provides a non-judgmental environment where you can express yourself freely without fear of criticism or stigma</p>
+                </article>
+
+                <article class="about-card">
+                    <div class="about-icon" aria-hidden="true">🧘</div>
+                    <h3>Evidence-Based Support</h3>
+                    <p>All exercises and techniques are grounded in psychology and mindfulness research for real, measurable benefits</p>
+                </article>
+
+                <article class="about-card">
+                    <div class="about-icon" aria-hidden="true">🔒</div>
+                    <h3>Privacy First</h3>
+                    <p>Your data stays with you. All conversations are stored locally and never shared with third parties</p>
+                </article>
+
+                <article class="about-card">
+                    <div class="about-icon" aria-hidden="true">⏰</div>
+                    <h3>Always Available</h3>
+                    <p>Get support anytime, anywhere. MindEase works offline to ensure you always have access to help</p>
+                </article>
+            </div>
+
+            <div class="disclaimer-box">
+                <h3>Important Note</h3>
+                <p>MindEase is a supportive tool designed to help with stress management and wellness. It is <strong>not a substitute</strong> for professional mental health treatment. If you're experiencing serious mental health concerns, please reach out to a mental health professional or crisis service.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 MindEase. Created with care for your mental wellness.</p>
+            <p class="footer-tagline">Your mind matters. We're here to support you.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+</body>
+</html>
