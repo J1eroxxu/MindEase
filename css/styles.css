@@ -1022,15 +1022,54 @@ a:hover {
     color: #8B5CF6;
 }
 
-@media (max-width: 768px) {
-    .chat-container {
-        height: auto;
-        min-height: 500px;
-        padding-top: 2.5rem;
-    }
+/* ============================================================================
+   DEMO VIDEO SECTION
+   ========================================================================== */
 
-    .session-indicator {
-        position: relative;
+.demo-section {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, rgba(45, 212, 207, 0.08) 0%, rgba(212, 165, 255, 0.08) 100%);
+    border-radius: 15px;
+    border-left: 4px solid #2DD4CF;
+}
+
+.demo-section h3 {
+    text-align: center;
+    color: #2DD4CF;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.demo-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.video-container {
+    width: 100%;
+    background: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(45, 212, 207, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.video-description {
+    text-align: center;
+    color: #4B5563;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
         top: auto;
         right: auto;
         margin: 0 0 1rem;
