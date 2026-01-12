@@ -1276,3 +1276,15 @@ a {
         background: white;
     }
 }
+
+/* Hide external popups and widgets */
+iframe[src*="botpress"],
+[id*="bp-"],
+.bp-widget,
+[class*="botpress"],
+[id*="botpress"] {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    width: 0 !important;
+}
