@@ -658,6 +658,12 @@ a:hover {
     flex-direction: column;
     min-height: auto;
     position: relative;
+    border-top: none !important;
+}
+
+.chat-container::before,
+.chat-container::after {
+    display: none !important;
 }
 
 .chat-header {
