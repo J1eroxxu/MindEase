@@ -632,11 +632,10 @@ a:hover {
     background: white;
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(45, 212, 207, 0.15);
-    overflow: hidden;
+    overflow: visible;
     display: flex;
     flex-direction: column;
-    height: auto;
-    min-height: 650px;
+    min-height: 700px;
 }
 
 .chat-header {
@@ -644,6 +643,7 @@ a:hover {
     color: white;
     padding: 2rem 1.5rem;
     text-align: center;
+    border-radius: 20px 20px 0 0;
 }
 
 .chat-header h3 {
@@ -789,7 +789,7 @@ a:hover {
 
 .session-indicator {
     position: absolute;
-    top: 1rem;
+    top: -2.5rem;
     right: 1.5rem;
     display: flex;
     align-items: center;
