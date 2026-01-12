@@ -642,19 +642,22 @@ a:hover {
 .chat-header {
     background: linear-gradient(135deg, #2DD4CF 0%, #D4A5FF 100%);
     color: white;
-    padding: 1.5rem;
+    padding: 2rem 1.5rem;
     text-align: center;
 }
 
 .chat-header h3 {
-    margin: 0 0 0.5rem;
+    margin: 0 0 0.8rem;
     color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .chat-disclaimer {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
     margin: 0;
+    line-height: 1.4;
 }
 
 .chat-messages {
