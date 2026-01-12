@@ -666,7 +666,8 @@ a:hover {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
+    min-height: 300px;
 }
 
 .message {
@@ -837,11 +838,12 @@ a:hover {
 .wellness-intro {
     background: linear-gradient(135deg, rgba(45, 212, 207, 0.08) 0%, rgba(212, 165, 255, 0.08) 100%);
     border-left: 4px solid #2DD4CF;
-    padding: 0.8rem;
-    margin: 0 1rem 1rem;
+    padding: 0.6rem;
+    margin: 0 0.8rem 0.8rem;
     border-radius: 10px;
-    max-height: 90px;
-    overflow-y: auto;
+    max-height: 60px;
+    overflow: hidden;
+    display: none;
 }
 
 .wellness-intro h4 {
