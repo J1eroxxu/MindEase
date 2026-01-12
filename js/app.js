@@ -429,10 +429,16 @@ function initChatbot() {
 
     // Suggested prompts
     suggestedPrompts.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
             const text = btn.textContent;
             chatInput.value = text;
             chatInput.focus();
+            
+            // Auto-submit the form after a short delay
+            setTimeout(() => {
+                chatForm.dispatchEvent(new Event('submit'));
+            }, 100);
         });
     });
 
