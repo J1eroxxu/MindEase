@@ -53,6 +53,19 @@ h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     text-align: center;
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+h2::before,
+h2::after {
+    display: none !important;
+}
+
+.container h2::after,
+.container h2::before {
+    display: none !important;
 }
 
 h3 {
