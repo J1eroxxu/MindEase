@@ -611,7 +611,7 @@ a:hover {
     padding: 2rem;
     border-radius: 10px;
     max-width: 900px;
-    margin: 3rem auto 0;
+    margin: 3rem auto 3rem auto;
 }
 
 .disclaimer-box h3 {
