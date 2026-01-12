@@ -9,7 +9,12 @@
     <link rel="stylesheet" href="css/styles.css?v=2.0">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' fill='%232DD4CF'>🧠</text></svg>">
     <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-    <script src="https://mediafiles.botpress.cloud/4a5f0e39-31ae-4d54-8166-3e9dcb2e3ea7/webchat/config.js" defer></script>
+    <script>
+      window.botpressWebChat.init({
+        botId: '4a5f0e39-31ae-4d54-8166-3e9dcb2e3ea7',
+        hostUrl: 'https://cdn.botpress.cloud/webchat/v1'
+      })
+    </script>
 </head>
 <body>
     <!-- Navigation Bar -->
