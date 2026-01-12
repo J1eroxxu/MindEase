@@ -998,14 +998,7 @@ a:hover {
     transform: translateX(4px);
 }
 
-/* Botpress Webchat Container */
-#bp-web-widget-container {
-    width: 100%;
-    height: auto;
-    min-height: 200px;
-    border-top: 1px solid #E5E7EB;
-}
-
+/* Botpress Webchat Configuration */
 .bp-web-widget {
     border-radius: 0 !important;
 }
