@@ -11,6 +11,13 @@
     
     <!-- Botpress Webchat Integration -->
     <script src="https://cdn.botpress.cloud/webchat/v3.5/inject.js"></script>
+    <script>
+        window.botpressWebChat = { 
+            containerSelector: '#bp-web-widget-container',
+            showCloseButton: false,
+            showBotInfoPanel: false
+        };
+    </script>
     <script src="https://files.bpcontent.cloud/2026/01/06/07/20260106071201-YZ4NWGTD.js" defer></script>
 </head>
 <body>
@@ -184,6 +191,9 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Botpress Webchat Container -->
+                <div id="bp-web-widget-container" style="width: 100%; height: auto; border-top: 1px solid #E5E7EB;"></div>
 
                 <div class="chat-input-area">
                     <!-- Mood Check-In Quick Start -->
