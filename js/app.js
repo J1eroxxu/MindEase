@@ -370,6 +370,17 @@ function initChatbot() {
     const moodQuickBtns = document.querySelectorAll('.mood-quick-btn');
     const startChatBtn = document.getElementById('start-chat-btn');
 
+    console.log('🤖 initChatbot called');
+    console.log('chatForm:', chatForm);
+    console.log('chatInput:', chatInput);
+    console.log('chatMessages:', chatMessages);
+    console.log('suggestedPrompts:', suggestedPrompts.length);
+
+    if (!chatForm || !chatInput || !chatMessages) {
+        console.error('❌ Missing chat elements!');
+        return;
+    }
+
     // Handle mood quick-start buttons
     moodQuickBtns.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -407,6 +418,8 @@ function initChatbot() {
         e.preventDefault();
         const message = chatInput.value.trim();
         
+        console.log('📤 Form submitted with message:', message);
+        
         if (message) {
             addUserMessage(message);
             chatInput.value = '';
@@ -414,6 +427,7 @@ function initChatbot() {
             // Simulate typing and respond
             setTimeout(() => {
                 const response = generateBotResponse(message);
+                console.log('🤖 Bot response:', response);
                 addBotMessage(response);
             }, 800);
             
