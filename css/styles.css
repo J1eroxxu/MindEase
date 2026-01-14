@@ -1065,11 +1065,12 @@ NAVIGATION BAR
 
 .video-container {
     width: 100%;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
     background: #000;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(45, 212, 207, 0.2);
-    margin-bottom: 1.5rem;
 }
 
 .video-container video {
