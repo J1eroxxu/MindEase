@@ -97,8 +97,8 @@ a:hover {
 }
 
 /* ============================================================================
-   NAVIGATION BAR
-   ========================================================================== */
+NAVIGATION BAR
+========================================================================== */
 
 .navbar {
     background: linear-gradient(135deg, rgba(45, 212, 207, 0.95) 0%, rgba(212, 165, 255, 0.85) 100%);
@@ -108,15 +108,16 @@ a:hover {
     top: 0;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(45, 212, 207, 0.1);
+    width: 100%;
 }
 
+
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0;
 }
 
 .logo {
@@ -129,8 +130,9 @@ a:hover {
     cursor: pointer;
     transition: transform 0.3s ease;
     flex-shrink: 0;
-    margin-right: auto;
+    padding-left: 2rem;
 }
+
 
 .logo:hover {
     transform: scale(1.05);
@@ -156,9 +158,12 @@ a:hover {
     display: flex;
     list-style: none;
     gap: 2rem;
+    margin-left: auto;
 }
 
 .nav-link {
+    display: flex;
+    gap: 2rem;
     color: white;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -336,6 +341,62 @@ a:hover {
 
     .hero-visual {
         display: none;
+    }
+}
+
+/* ============================================================================
+   POSTER CARD SECTION
+   ========================================================================== */
+
+.poster-section {
+    padding: 4rem 1.5rem;
+    background: linear-gradient(135deg, rgba(45, 212, 207, 0.05) 0%, rgba(212, 165, 255, 0.05) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto;
+}
+
+.poster-card {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(45, 212, 207, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.6s ease-out;
+}
+
+.poster-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(45, 212, 207, 0.25);
+}
+
+.poster-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .poster-section {
+        padding: 2rem 1rem;
+    }
+
+    .poster-card {
+        max-width: 100%;
     }
 }
 
