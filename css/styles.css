@@ -348,56 +348,6 @@ NAVIGATION BAR
    POSTER CARD SECTION
    ========================================================================== */
 
-.poster-section {
-    padding: 4rem 1.5rem;
-    background: linear-gradient(135deg, rgba(45, 212, 207, 0.05) 0%, rgba(212, 165, 255, 0.05) 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: auto;
-}
-
-.poster-card {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(45, 212, 207, 0.15);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: slideUp 0.6s ease-out;
-}
-
-.poster-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 80px rgba(45, 212, 207, 0.25);
-}
-
-.poster-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .poster-section {
-        padding: 2rem 1rem;
-    }
-
-    .poster-card {
-        max-width: 100%;
-    }
 }
 
 /* ============================================================================
@@ -1175,6 +1125,28 @@ NAVIGATION BAR
 .about-section {
     padding: 5rem 1.5rem;
     background: linear-gradient(180deg, #F0E7FF 0%, #F8F9FA 100%);
+}
+
+.poster-card-about {
+    max-width: 450px;
+    margin: 0 auto 4rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(45, 212, 207, 0.15);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.6s ease-out;
+}
+
+.poster-card-about:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px rgba(45, 212, 207, 0.25);
+}
+
+.poster-image-about {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
 }
 
 .about-grid {
