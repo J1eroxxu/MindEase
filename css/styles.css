@@ -939,56 +939,6 @@ NAVIGATION BAR
     margin-top: 0.25rem;
 }
 
-/* Mood Quick Start Buttons */
-.mood-quick-start {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #E5E7EB;
-}
-
-.quick-start-label {
-    display: block;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #4B5563;
-    margin-bottom: 0.75rem;
-}
-
-.mood-quick-buttons {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.mood-quick-btn {
-    padding: 0.5rem 0.85rem;
-    background: white;
-    border: 2px solid #D4A5FF;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 0.75rem;
-    color: #8B5CF6;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
-    white-space: nowrap;
-}
-
-.mood-quick-btn:hover {
-    background: linear-gradient(135deg, #2DD4CF 0%, #D4A5FF 100%);
-    color: white;
-    border-color: #2DD4CF;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(45, 212, 207, 0.2);
-}
-
-.mood-quick-btn:active {
-    transform: translateY(0);
-}
-
 /* Enhanced Suggested Prompts */
 .suggested-prompts {
     display: flex;
