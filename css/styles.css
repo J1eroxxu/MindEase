@@ -1065,38 +1065,6 @@ NAVIGATION BAR
         gap: 2rem;
     }
 }
-        top: auto;
-        right: auto;
-        margin: 0 0 1rem;
-        width: fit-content;
-    }
-
-    .message-content {
-        max-width: 85%;
-    }
-
-    .suggested-prompts {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .mood-quick-buttons {
-        justify-content: space-between;
-        gap: 0.4rem;
-    }
-
-    .mood-quick-btn {
-        flex: 1;
-        min-width: 60px;
-        padding: 0.5rem 0.75rem;
-        font-size: 0.8rem;
-    }
-
-    .wellness-intro {
-        margin: 0 1rem 1rem;
-        padding: 1rem;
-    }
-}
 
 /* ============================================================================
    ABOUT SECTION
