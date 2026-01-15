@@ -1,0 +1,2 @@
+GitHub Pages is serving from gh-pages branch.
+Last update: 2026-01-15 - Side-by-side layout with inline styles
